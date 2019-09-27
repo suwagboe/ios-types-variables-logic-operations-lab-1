@@ -1,4 +1,4 @@
-# Types Variables Logic and Operations Lab
+ # Types Variables Logic and Operations Lab
 
 ## Instructions for lab submission
 
@@ -13,14 +13,20 @@
 
 ```swift
 a. let nameOfPrincipal: Character = "Mrs. Watkins"
+``` incorrect```
 
 b. var temperatureOutside: Int = 90.7
+``` incorrect```
 
 c. var isSummer: String = false
+``` correct ```
 
 d. let whiteHouseAddress: Int + String = 1600 + "Pennsylvania Ave"
+```incorrect```
 
 e. var peopleAtParty: Double = "95"
+
+```correct```
 ```
 
 ***
@@ -28,18 +34,21 @@ e. var peopleAtParty: Double = "95"
 
 ```swift
 a. !(4 + 3 < 2 * 4)
+```false```
 
 b. !(1 + 1 != 2) && !(3 >= 3)
+```false```
 
 c. (3 < 2 || (0 < 1 && 3 >= 3)) && true
+```true ```
 
 d. !!(!!true && !!false)
-
+```false ```
 e. true && (true && (true && (true || false)))
-```
+```true ```
 
 ***
-
+```
 ## 3. You are given two variables a and b, compute their sum and store it in another variable named sum then print the result.
 
 ```swift
@@ -48,6 +57,10 @@ Example 1
 Input:
 var a = 1
 var b = 2
+```var sum = a + b 
+print("the result is \(sum)")```
+
+
 
 Expected values:
 sum = 3
@@ -59,16 +72,33 @@ Example 2
 Input:
 var a = 13
 var b = 22
+``` var sum = a + b 
+print("the result is \(sum)")```
 
 Expected values: 
 sum = 35
 
 Output:
 35
+
+```
+let a = 3
+let b = 4
+var sum = a + b
+print("the result is \(sum)")
+```
 ```
 
 ***
 ## 4.Determine the number of seconds in a year and store the number in a variable named secondsInAYear.
+```
+```
+var seconds = 60
+var secondsInHour = seconds * 60
+var secondsInDay = secondsInHour * 24
+var secondsInYear = secondsInDay * 36
+print("The amount of seconds is a year is \(secondsInYear)")
+```
 
 ```swift
 Hint:
@@ -98,7 +128,7 @@ var width = 1920
 var height = 1080
 
 Expected values:
-numberOfPixels = 2073600
+numberOfPixels = 2073600 
 
 Hint:
 Consider a 5x3 screen like this:
@@ -107,9 +137,16 @@ Consider a 5x3 screen like this:
 *****
 
 The number of pixels on this screen is 5+5+5 = 5*3
-```
 
+``` 
+var width =  5
+var height = 3
+var numberOfPixels = width * height
+
+print("the number of pixels are \(numberOfPixels)")
+```
 ***
+```
 ## 6. You are given the sum and the difference of two numbers. Find out the values of the original numbers and store them in variables a and b.
 
 ```swift
@@ -137,6 +174,21 @@ b = 1
 Hint:
 sum + diff = a + a + b - b
 sum + diff = 2 * a
+
+```
+a=5
+b=3
+
+let sum = 8
+let diff = 2
+
+var a=((sum + diff) / 2)
+var b=(sum - a)
+print("var a is \(a)")
+print("var b is \(b)")
+
+
+```
 ```
 
 ***
@@ -159,6 +211,17 @@ var b = 2
 
 a = b // a will have the value 2. The original value of a is lost
 b = a // b will remain the same
+
+```
+var a = 1
+var b = 2
+var temp = a
+a = b
+b = temp
+print(a)
+print(b)
+
+```
 ```
 
 ***
@@ -185,7 +248,13 @@ Hint:
 Use the remainder % operator.
 Remember that a = k * (a / k) + a % k
 Can you think of a value for k that gives the last digit?
+ 
+ ```
+ a = 123
+ k = a % 10 
+ print(k)
 
+```
 ```
 
 ***
@@ -199,6 +268,12 @@ var rockysAge = 50
 
 Output:
 7
+```
+var dogYears = 50
+var humanYear = (dogYears/7)
+
+print(humanYear)
+```
 
 ```
 
@@ -237,6 +312,13 @@ Solve for alice
 
 ```
 
+var bob = 12 
+var alice = y * (bob + x)
+
+```
+
+```
+
 ***
 ## 11. You have x apples. Bob trades 3 oranges for 5 apples. He does not accept trades with cut fruit. How many oranges can you get from Bob and how many apples will you have left? The number of apples you will have left should be stored in a variable named apples. The number of oranges you will have after the trade should be stored in a variable named oranges.
 
@@ -261,11 +343,13 @@ oranges = 15
 
 Hint:
 Use the division(/) and the remainder(%) operator
+```
+x 
 
 ```
-
+```
 ***
-## 12. A class consists of numberOfBoys boys and numberOfGirls girls.
+## (NOT DONE)12. A class consists of numberOfBoys boys and numberOfGirls girls.
 ### Print the percentage of boys in the class followed by the percentage of girls in the class. The percentage should be printed rounded down to the nearest integer. For example 33.333333333333 will be printed as 33.
 
 ```swift
@@ -282,17 +366,31 @@ Output:
 75 // percentage of girls
 
 ```
+var numberOfBoys = 
 
+
+output:
+```
+
+```
 ***
 ## 13.Which of the following expressions evaluate to true?
 
 ```swift
 a. false || true
-b. false && true
-c. !false
-d. !!!true
-e. !(true && true)
+```true```
 
+b. false && true
+``` false ```
+
+c. !false
+``` true```
+
+d. !!!true
+```true ```
+
+e. !(true && true)
+```false ```
 ```
 
 ***
@@ -300,10 +398,18 @@ e. !(true && true)
 
 ```swift
 a. 3 < 12.3
-b. 9 == 2
-c. "Hello!" == "Hello!"
-d. 19.0 >= 19.0
-e. 9 > 7 && 7 < 10
+``` true```
 
+b. 9 == 2
+```false ```
+
+c. "Hello!" == "Hello!"
+```true ```
+
+d. 19.0 >= 19.0
+```true ```
+
+e. 9 > 7 && 7 < 10
+```true ```
 ```
 
